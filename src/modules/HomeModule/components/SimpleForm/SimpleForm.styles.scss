@@ -37,8 +37,15 @@
     display: flex;
     gap: 14px;
 
-    & > input:nth-child(2) {
-      max-width: 120px;
+    & > div {
+      flex-grow: 1;
+      & > input {
+        margin-bottom: 14px;
+      }
+
+      &:nth-child(2) {
+        max-width: 120px;
+      }
     }
   }
 
@@ -88,7 +95,7 @@
 
     & &__flex-container {
       flex-direction: column;
-      & > input:nth-child(2) {
+      & > div:nth-child(2) {
         max-width: unset;
       }
     }
@@ -96,7 +103,7 @@
 
   @media (min-width: 550px) {
     & &__flex-container {
-      & > input:nth-child(2) {
+      & > div:nth-child(2) {
         max-width: 165px;
       }
     }
